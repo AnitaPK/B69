@@ -3,67 +3,103 @@
 
 <head>
     <title>My first page</title>
-    <link rel="icon" href="./assets/tribute.jpg" /> 
+    <link rel="icon" href="./assets/tribute.jpg" />
 
     <style>
-        body{
+        body {
             /* background-color: rgb(0,255,0); */
             background-image: url("./assets/bgOne.jpg");
             background-repeat: no-repeat;
             background-size: cover;
         }
-        h1{
+
+        h1 {
             color: red;
         }
-        img{
+
+        img {
             width: 300px;
             height: 300px;
         }
-        .image1{
+
+        .image1 {
             width: 150px;
             height: 150px;
         }
-       .image2{
+
+        .image2 {
             width: 250px;
             height: 250px;
         }
-        .image3{
+
+        .image3 {
             width: 450px;
             height: 450px;
         }
-        .customBorder{
+
+        .customBorder {
             border: 4px solid black;
         }
-        #headingID{
+
+        #headingID {
             font-size: 40px;
             font-weight: 800;
+        }
+        a:link{
+            background-color: rgb(255, 84, 84);
+            font-size: x-large;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: #ff0000;
+            font-size: x-large;
+        }
+        a:active{
+            background-color: black;
+        }
+        a:visited{
+            background-color: rgb(255, 84, 84);
+
+            font-size: x-large;
+            color: white;
         }
     </style>
 
 </head>
 
-<body >
-    <b class="customBorder">Hello</b>
-    <p><blockquote>My name is this this this</blockquote></p>
+<body>
+
+<a href="./tribute.html" target="_blank">Tribute</a>
+<a href="https://wisdomsprouts.in/">Wisdom Sprouts</a>
+<a href="http://yahoo.com">Yahoo</a>
+
+
+    <b class="customBorder" title="this message is shown on hover">Hello</b>
+    <p>
+    <blockquote>My name is this this this</blockquote>
+    </p>
     <hr />
     <br />
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, odit.</p>
-<h1 class="customBorder">Heading One</h1>
-<i>Italic</i>
+    <h1 class="customBorder">Heading One</h1>
+    <i>Italic</i>
 
-<h5 id="headingID">heading five</h5>
-<h6>heading six</h6>
-<strong>Strong</strong>
-<del class="customBorder">Delete</del>
-<sup>above</sup>
-<sub>Below</sub>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magnam?</div>
-<section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et alias dolore itaque labore assumenda consectetur unde error eaque quam laboriosam?</section>
-<span>Lorem, ipsum.</span>
-<i>Lorem, ipsum dolor.</i>
-<em id="headingID">121212 Lorem ipsum dolor sit.</em>
+    <h5 id="headingID">heading five</h5>
+    <h6>heading six</h6>
+    <strong>Strong</strong>
+    <del class="customBorder">Delete</del>
+    <sup>above</sup>
+    <sub>Below</sub>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magnam?</div>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et alias dolore itaque labore assumenda
+        consectetur unde error eaque quam laboriosam?</section>
+    <span>Lorem, ipsum.</span>
+    <i>Lorem, ipsum dolor.</i>
+    <em id="headingID">121212 Lorem ipsum dolor sit.</em>
 
-<pre>
+    <pre>
     layout Elements
 
 section nav main article footer header aside 
@@ -84,13 +120,13 @@ website
 
 </pre>
 
-<marquee>Hello hello hello</marquee>
-<!--   this is comment -->
-units 
-relative         absolute
-                  px 
-% , rem vh vw  
-<pre>
+    <marquee>Hello hello hello</marquee>
+    <!--   this is comment -->
+    units
+    relative absolute
+    px
+    % , rem vh vw
+    <pre>
 image 
 
 styles Cascading style sheet CSS
@@ -102,14 +138,46 @@ styles Cascading style sheet CSS
 
 </pre>
 
-<img src="./assets/tribute.jpg" alt="image not shown" width="100" height="100" />
-<img src="./assets/tribute.jpg" alt="image not shown" />
-<img src="./assets/tribute.jpg" alt="image not shown" class="image1 customBorder"/>
-<img src="./assets/tribute.jpg" alt="image not shown" class="image2" />
-<img src="./assets/tribute.jpg" alt="image not shown" class="image3" />
+    <img src="./assets/tribute.jpg" alt="image not shown" width="100" height="100" />
+    <img src="./assets/tribute.jpg" alt="image not shown" />
+    <img src="./assets/tribute.jpg" alt="image not shown" class="image1 customBorder" />
+    <img src="./assets/tribute.jpg" alt="image not shown" class="image2" />
+    <img src="./assets/tribute.jpg" alt="image not shown" class="image3" />
 
+    <h2>HTML LISTS</h2>
+    descriptive list
+    ordered list
+    unordered list
 
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hyper text markup language</dd>
+        <dt>CSS</dt>
+        <dd>CAscading style sheet</dd>
+    </dl>
+
+    <ol type="I" start="1001" style="color:red">
+        <li>Sakhar</li>
+        <li>Tel</li>
+            <ol type="I">
+                <li>Coconut</li>
+                <li>Soyabean</li>
+            </ol>
+        <li>Khobar</li>
+    </ol>
+
+<ul>
+    <li>Tea</li>
+    <ul>
+        <li>Black Tea</li>
+        <li>Green Tea</li>
+        <li>Ginger Tea</li>
+    </ul>
+    <li>Coffee</li>
+    <li>Coldrinks</li>
+</ul>
 
 
 </body>
+
 </html>
