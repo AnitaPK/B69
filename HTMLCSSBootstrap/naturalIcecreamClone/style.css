@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: rgb(232, 232, 232);
+}
+.green-btn{
+    background-color: rgb(8, 130, 8);
+    color: white;
+    padding: 7px 10px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+.blackBTN{
+        background-color: #000;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+/* header first navbar  */
+.headerSection{
+    background-color: rgb(8, 130, 8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.logoNavbar{
+    background-color: white;
+    padding: 20px;
+}
+.logoContainer{
+    width: 80%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoDiv{
+    display: flex;
+}
+.logo{
+    max-width: 300px;
+    height: auto;
+}
+.greenbtn-div{
+    margin-top:30px;
+    margin-left: 10px;
+}
+
+.serachDiv{
+    background-color: gray;
+    padding: 1rem 2rem;
+}
+
+.searchIcon{
+    background-color: rgb(8, 130, 8);
+    color: white;
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* main navbar / menu navbar  */
+
+.menuNavbar{
+    background-color: rgb(90, 90, 90);
+}
+.menuUL{
+    list-style-type: none;
+    width: 60%;
+    margin: 0 auto;
+}
+.menuList{
+    display: inline-block;
+    padding: 15px;
+}
+.menuName{
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+.menuName:hover{
+    color: rgb(8, 130, 8);
+}
+.headerIMG{
+    width: 100%;
+}
+
+
+
+/* JS-BF  */
+
+.JS-BF{
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.JS-BF img{
+    width: 100%;
+}
+
+
+/* order now  */
+.orderNow{
+    background-color: rgb(8, 130, 8);
+    height: 300px;
+}
+.orderNow p{
+    /* display: inline; */
+    width: 10rem;
+    text-align: center;
+    font-size: larger;
+    color: white;
+    border-bottom: 2px solid white;
+    margin: 10px auto;
+    padding-bottom: 7px;
+}
