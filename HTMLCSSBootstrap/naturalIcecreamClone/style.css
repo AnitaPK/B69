@@ -13,6 +13,7 @@ body{
     padding: 7px 10px;
     border-radius: 7px;
     text-decoration: none;
+    border: 0;
 }
 .blackBTN{
         background-color: #000;
@@ -20,6 +21,18 @@ body{
     padding: 7px 10px;
     border-radius: 7px;
     text-decoration: none;
+    border: 0;
+}
+.gray-btn{
+        background-color: #5c5c5c;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 7px;
+    text-decoration: none;
+    border: 0;
+}
+.gray-btn:hover{
+    background-color: green;
 }
 /* header first navbar  */
 .headerSection{
@@ -89,9 +102,42 @@ body{
 .headerIMG{
     width: 100%;
 }
+/* card icecream  */
+.products{
+    width: 80%;
+    margin: 1rem auto;
+}
+.ProductContainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
+.iceCreamCard{
+    width: 17rem;
+    /* flex: 20%; */
+    height: auto;
+    background-color: white;
+    overflow: hidden;
 
-
+}
+.iceCreamCard img{
+    width: 100%;
+}
+.iceCreamCard img:hover{
+    width: 110%;
+}
+.iceCreamCard h3{
+    margin: 3rem auto;
+    text-align: center;
+}
+.iceCreamCard div{
+    display: none;
+    text-align: center;
+}
+.iceCreamCard:hover div{
+    display: block;
+}
 /* JS-BF  */
 
 .JS-BF{
