@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            /* border-collapse: collapse; */
+            border-spacing: 10px;
+        }
+        th{
+            background-color: green;
+            text-align: start;
+            color: white;
+        }
+        td{
+            /* background-color: rgb(252, 176, 77); */
+            padding: 10px;
+        }
+        .tableOverflow{
+            overflow: auto;
+        }
+        tr:nth-child(3){
+            background-color: yellow;
+        }
+        tr:hover{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="tableOverflow">
+    <table style="width: 700px;">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Department</th>
+                <th colspan="2">Contact Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Aadesh </td>
+                <td>Information Technology</td>
+                <td>3456345656</td>
+                <td>3456345656</td>
+
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Rahul </td>
+                <td>Mechanical </td>
+                <td>3456345656</td>
+                <td>3456345656</td>
+
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Prasad </td>
+                <td>Computer </td>
+                <td>3456345656</td>
+                <td>3456345656</td>
+
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Gaurav </td>
+                <td>Mechanical </td>
+                <td>3456345656</td>
+                <td>3456345656</td>
+
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
