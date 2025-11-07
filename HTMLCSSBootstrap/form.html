@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        sup{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <label for="fName">First name <sup>*</sup>:</label>
+        <input type="text" id="fName" required/>
+        <label for="lName">Last name <sup>*</sup>:</label>
+        <input type="text" id="lName" disabled value="last name"/>
+        <label for="contactNumber">Contact Number</label>
+        <input type="tel" id="contactNumber"/>
+        <label for="age">Age</label>
+        <input type="number" min="18" max="50" value="30" step="5" id="contactNumber" />
+        <label for="email">Email</label>
+        <input type="email" />
+        <button >Click here for submit</button>
+        <input type="submit" value="Register"/>
+        <input type="reset" />
+        <input type="button" value="click me"/>
+        <input type="color" value="#ff0000"/>
+        <input type="date" />
+        <input type="datetime-local" />
+        <input type="file" />
+        <input type="hidden" />
+        <input type="month" />
+        <input type="image" />
+        <input type="password" />
+        <input type="range" min="5" max="1000" value="100"/>
+        <input type="search" />
+
+
+        <input type="checkbox" value="tea" name="hotDrink"/><label>Tea</label>
+        <input type="checkbox" value="coffee" name="hotDrink"/><label>Coffee</label>
+        <input type="checkbox" value="greenTea" /><label>Green Tea</label>
+
+
+        <input type="radio" />
+
+        <select value="subject" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">Javascript</option>
+        </select>
+        <textarea rows="20" cols="20"></textarea>
+    </form>
+</body>
+</html>

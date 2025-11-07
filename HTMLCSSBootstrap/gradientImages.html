@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .shape{
+            width: 300px;
+            height: 300px;
+        }
+        .bgImage{
+            background-image: url('./bgPosition.jpg');
+        }
+        .linearGrad{
+            background-image: linear-gradient(135deg, red,yellow, blue);
+        }
+        .radialGrad{
+            background:  radial-gradient(yellow, black,red);
+        }
+        .multipleGrad{  
+            background: radial-gradient(ellipse at top, #e66465, transparent),
+            linear-gradient(135deg, red,yellow, blue, transparent);
+        }
+        .conicGrad{
+            background: conic-gradient(at 30% 70%, green 45deg, orange 90deg,purple, green);
+        }
+.multiGrad1{
+            background: radial-gradient(ellipse at top, #e66465, transparent),
+            conic-gradient(at 30% 70%, green 45deg, orange 90deg,purple, green, transparent);
+
+}
+.shaOne{
+    width: 230px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 50%;
+
+}
+.shaOne:hover{
+    box-shadow: 0px 0px 4px 3px red, 3px 3px 4px 3px blue;
+}
+    </style>
+</head>
+<body>
+    <div style="width: 50%; margin: 20px auto;">
+<div class="shaOne"></div>
+</div>
+    <div class="shape bgImage"></div>
+    <div class="shape linearGrad" style="padding: 30px;">
+        <div style="background-color: burlywood; margin: 20px;padding: 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, neque.
+            <button class="linearGrad">Click me for more details</button>
+        </div>
+    </div>
+    <div class="shape radialGrad"></div>
+    <div class="shape conicGrad"></div>
+    <div class="shape "></div>
+    <div class="shape multiGrad1"></div>
+    <div class="shape multipleGrad"></div>
+</body>
+</html>
