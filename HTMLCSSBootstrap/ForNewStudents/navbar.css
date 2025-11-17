@@ -1,0 +1,69 @@
+body{
+    background-color:azure ;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff6200;
+}
+
+.menus{
+    display: flex;
+    /* gap:10px */
+}
+
+.searchBar{
+    /* margin: 15px; */
+}
+
+.imgLOGO{
+    width: 100px;
+    height: 60px;
+    mix-blend-mode: multiply;
+}
+.navItem{
+    display: inline;
+    /* margin: 15px; */
+}
+.m15{
+    margin: 15px;
+}
+.btnGO{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color: #ff6200;
+}
+
+a{
+    color: white;
+    text-decoration:none;
+}
+a:hover{
+    text-shadow: 3px 3px 2px black;
+}
+.opacity{
+    background-color: rgba(0,0,0,0.5);
+    width: 100px;
+    height: 100px;
+    color: rgb(255,0,0);
+    /* opacity: 0.1; */
+
+}
+
+
+@media screen and (min-width:769px) and (max-width:950px){   
+    body{
+        background-color: pink;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        background-color: black;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containerOne {
+            background-color: aquamarine;
+            height: 500px;
+            display: flex;
+            gap: 15px;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            color: white;
+            font-size: 40px;
+        }
+
+        .box {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            order: 1;
+        }
+
+        .box2 {
+            background-color: blue;
+            width: 200px;
+            height: 400px;
+            order: 2;
+
+        }
+
+        .box3 {
+            width: 500px;
+            background-color: blue;
+            order: 3;
+
+        }
+
+        .box4 {
+            background-color: blue;
+            width: 150px;
+            order: 4;
+
+        }
+
+        .box5 {
+            background-color: blue;
+            width: 70px;
+            order: 5;
+
+        }
+
+        .containerTwo{
+            display: flex;
+            background-color: rgb(20, 20, 108);
+                color:white;
+            gap:1rem
+        }
+        @media only screen and (max-width:768px) {
+            .containerOne {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+
+            .box3 {
+                order: 5;
+            }
+
+            .box5 {
+                order: 4;
+            }
+
+            .box4 {
+                order: 3;
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerOne">
+        <div class="box">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+
+    </div>
+
+    <div class="containerTwo">
+        <div class="itemOne">
+            Child
+        </div>
+        <div class="itemTwo">
+            This is large content
+        </div>
+        <div class="itemThree">
+            Child
+        </div>
+    </div>
+    
+</body>
+
+</html>

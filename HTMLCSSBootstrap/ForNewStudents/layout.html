@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .layout{
+            display: flex;
+            flex-wrap: wrap;
+            /* gap: 10px; */
+        }
+        .headerOne{
+            flex: 100%;
+            height: 100px;
+            background-color: chocolate;
+            order: 1;
+        }
+        .ASide1{
+            flex: 25%;
+            background-color: yellow;
+            height: 400px;
+            order:2;
+        }
+        .lorem{
+            flex: 50%;
+            background-color: cornflowerblue;
+            order: 3;
+
+        }
+        .Aside2{
+            flex: 25%;
+            background-color: pink;
+            height: 400px;
+            order: 4;
+        }
+        .footerOne{
+            flex: 100%;
+            background-color: aqua;
+            height: 200px;
+            order: 5;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+        <div class="layout">
+        <div class="headerOne"></div>
+        <div class="ASide1"></div>
+        <div class="lorem"></div>
+        <div class="Aside2"></div>
+        <div class="footerOne"></div>
+    </div>
+</body>
+</html>
