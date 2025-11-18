@@ -54,9 +54,52 @@
             color: red;
         }
         /* :nth-child() */
+        .pseudoElmtClass{
+            color: yellow;
+        }
+        .pseudoElmtClass::first-letter{
+            color: red;
+            font-size: 60px;
+        }
+        .pseudoElmtClass::first-line{
+            color: blue;
+        }
+        .pseudoElmtClass::after{
+            content: "~";
+        }
+        img{
+            border: 2px solid black;
+        }
+        img[alt]{
+            border: 3px solid blue;
+        }
+        img[alt='flower']{
+            border: 3px solid purple;
+        }
+        img[alt|='flower']{
+            border: 3px solid yellow;
+        }
+        img[alt~='flower']{
+            border: 3px solid rgb(255, 136, 0);
+        }
+        img[alt*='flower']{
+            border: 3px solid rgb(0, 255, 13);
+        }
+        img[alt^='sma']{
+            border: 3px solid rgb(255, 0, 204);
+        }
     </style>
 </head>
 <body>
+
+<img src="./ForNewStudents/fOne.jpg"  />
+<img src="./ForNewStudents/fThree.jpg" alt="" />
+<img src="./ForNewStudents/fTwo.jpg" alt="flower " />
+<img src="./ForNewStudents/fOne.jpg" alt="flower-small" />
+<img src="./ForNewStudents/fTwo.jpg" alt="small flower" />
+<img src="./ForNewStudents/fThree.jpg" alt="smellflowerGood" />
+
+    <p class="pseudoElmtClass">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio vero repellat pariatur, voluptates adipisci reiciendis! Quia, iusto eaque? Corporis voluptates, eius sed, officiis repellendus tempora cumque aperiam alias quam natus quibusdam inventore exercitationem nisi quidem architecto, repellat delectus laboriosam at soluta molestias odit culpa cum tenetur distinctio. Architecto reiciendis magnam quo quis assumenda distinctio ipsam aliquam. Iusto omnis nihil libero.</p>
 <a href="./form.html" class="pageLink">Form</a>
 
     <h1 title="I will show when hover on css selectors" style="text-align: center;">CSS SELECTORS</h1>

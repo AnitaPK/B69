@@ -15,39 +15,71 @@
             border: 0;
         }
         input:focus{
-            padding: 20px;
-            background-color: blue;
+            padding: 5px;
+            background-color: rgb(201, 201, 210);
         }
     </style>
 </head>
 
 <body>
-    <form onsubmit="">  
+    <form onsubmit="" required autocomplete="" autocorrect="" onformchange="" method="" action="" >  
         <div>
-            <label for="fName">First Name:</label>
-            <input type="text" id="fName" />
+            <label for="fName" >First Name:</label>
+            <input type="text" id="fName" required value="John" name="firstName" />
         </div>
         <div>
             <label for="lName">Last Name</label>
-            <input type="text" id="lName" />
+            <input type="text" id="lName" onchange="" oninput=""/>
         </div>
         <div>
             <label for="emailInput">Email </label>
-            <input type="email" id="emailInput" />
+            <input type="email" id="emailInput" placeholder="user@gmail.com"/>
         </div>
         <div>
             <label for="passwordInput">Password</label>
             <input type="password" />
         </div>
         <div>
-            <input type="checkbox" />
+            <input type="checkbox"  />
             <a href="#">Terms</a> and <a href="#">Conditions</a>
         </div>
+                <div>
+            <label for="pioncode">Pincode</label>
 
+            <input type="number" id="pioncode" size="10" max="999999" min="111111" value="411001" disabled/>
+        </div>
+
+        <input type="radio" value="adhaar" name="getInfoFrom"/><label>Adhar Card</label>
+        <input type="radio" value="pan" name="getInfoFrom"><label>Pan Card</label>
+        <input type="radio" value="voter" name="getInfoFrom" id="VOTER"/><label for="VOTER">VoterID Card</label>
+
+        <input type="range" min="100" max="1000" name="minprice" value="100"> 
+        <input type="range" min="100" max="1000" name="maxprice" value="800"> 
+
+        DOB
+        <input type="date" name="DOB" />
+
+        appointment 
+        <input type="datetime-local">
+
+        <label>Contact number</label>
+        <input type="text" pattern="^[9,8,7,6]{1}[0-9]{9}" />
+
+<input type="text" pattern="[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}" />
         <input type="submit">
-        <button onclick="">Register</button>
+        <button onclick="Demofunction()">Register</button>
         <input type="reset" />
     </form>
+
+
+
+
+    <script>
+        function Demofunction(){
+            let fNameVAlue = document.getElementById('fName').value
+            console.log(fNameVAlue)
+        }
+    </script>
 </body>
 
 </html>
