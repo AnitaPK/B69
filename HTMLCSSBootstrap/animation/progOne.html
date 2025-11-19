@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            padding: 5rem;
+        }
+        .divOne{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+        .scaledDiv{
+            /* transform:scaleY(2); */
+            /* transform: translate(50px,200px); */
+            /* transform: rotate(50deg); */
+            /* transform: skew(45deg,20deg); */
+        }
+        .scaledDiv:hover{
+            /* transform: rotate(50deg); */
+            /* transform: translateY(-80px); */
+            transform: skew(45deg,20deg);
+        }
+        .incCube{
+            transition: width 3s, height 2s 1s, font-size 3s, padding-top 3s;
+        }
+        .incCube:hover{
+            width:300px;
+            height: 300px;
+            font-size:50px;
+            padding-top:130px;
+        }
+        .incCube11{
+            transition: transform 1s, background-color 1s;
+        }
+        .incCube11:hover{
+            transform: scale(1.5,1.5);
+            background-color: green;
+        }
+        .animationOne{
+            animation-name: slideBar;
+            animation-duration: 4s;
+        }
+
+
+
+
+        @keyframes slideBar{
+            from{
+                background-color: yellow;
+            }
+            to{
+                background-color: orange;
+                transform: scale(1.2,1.2);
+            }
+        }
+
+        .animationTwo{
+            animation: slideBar2 3s 1s infinite linear;
+        }
+        @keyframes slideBar2{
+                
+            0%{background-color: yellow;}
+            10%{
+                transform: rotate(60deg);
+            }
+            20%{
+                transform: translateX(100px);
+                background-color: black;
+            }
+
+
+            100%{
+                 background-color: orange;
+                transform: scale(1.2,1.2);
+            }
+        }
+
+        .customIconAniMa{
+            color: red;
+            /* font-size: 100px; */
+            animation: heartBlink 1s infinite linear;
+        }
+
+        @keyframes heartBlink {
+            0%{
+                /* font-size: 100px; */
+            }   
+            100%{
+                /* font-size: 20px; */
+                transform: scale(4,4);
+
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <i class="fa-solid fa-heart customIconAniMa"></i>
+
+    <!-- <div class="divOne" style="background-color: blue;"></div>
+    <div class="divOne scaledDiv"></div>
+
+    <div class="divOne incCube" >HELLOOOO</div>
+    <div class="divOne incCube11" >HELLO</div>
+
+    <div class="divOne animationOne" >HELLO</div>
+    <div class="divOne animationTwo" >HELLO</div>
+
+
+    <div class=""></div> -->
+</body>
+</html>
