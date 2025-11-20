@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        li{
+            display: inline-block;
+        }
+.navOne{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+        @media screen and (max-width:600px) {
+            li{
+                display: block;
+            }
+            .navOne{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Lists</h1>
+<span>List of drink</span>
+    <ol start="501" type="i">
+        <li>Tea</li>
+        <ol type="I">
+            <li>Green Tea</li>
+            <li>Black Tea</li>
+
+        </ol>
+        <li>Coffee</li>
+    </ol>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam incidunt fuga similique accusamus. Dignissimos, excepturi. Ratione consectetur consequatur quae esse, vitae ullam quos incidunt maxime quaerat saepe earum pariatur modi.</dd>
+    </dl>    
+<!-- 
+    <ul>
+        <li>Tea</li>
+        <ul >
+            <li>Green Tea</li>
+            <li>Black Tea</li>
+
+        </ul>
+        <li>Coffee</li>
+    </ul> -->
+
+<ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">Conatct Us</a></li>
+    <li><a href="#">About Us</a></li>
+</ul>
+
+<div class="navOne">
+    <div class="navItem"><a href="#">HOME</a></div>
+    <div  class="navItem"><a href="#">Conatct Us</a></div>
+    <div  class="navItem"><a href="#">About Us</a></div>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conatinerGridOne{
+            background-color: greenyellow;
+            display: grid;
+            /* grid-template-rows: 50% 50%; */
+            /* grid-template-columns: 25% 50% 25%; */
+            grid-template-columns: repeat(4,1fr);
+            gap:10px
+        }
+        .Item{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .fruitContainer{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 2fr;  */
+            width: 400px;
+            gap:10px
+        }
+        .grapes{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            /* grid-row:1 / 2; */
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background-color: rgb(35, 22, 82);
+            width: 100px;
+            height: 100px;
+        }
+        .strawberry{
+            grid-row-start: 1;
+            grid-row-end: 2;
+              grid-column-start: 2;
+            grid-column-end: 3;
+            background-color: red;
+             width: 100px;
+            height: 100px;
+
+        }
+        .watermelon{
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color: rgb(205, 92, 92);
+            width: 200px;
+            height: 300px;
+        }
+        .orange{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: rgb(247, 191, 26);
+            width: 200px;
+            height: 200px;
+        }
+        .papaya{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: rgb(247, 100, 26);
+            width: 200px;
+            height: 150px;   
+        }
+        .pineapple{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color: brown;
+            width: 200px;
+            height: 150px;
+        }
+        .layoutOne{
+            display: grid;
+            grid-template-areas: "nav nav nav nav nav"
+                       "hed hed hed hed hed"
+                       "leftSide mai mai mai advt"
+                       "foo foo foo foo foo ";
+        }
+    </style>
+</head>
+<body>
+
+        <div class="layoutOne">
+            <nav style="grid-area: nav;">Navbar</nav>
+            <header style="grid-area: hed;">Hero Section </header>
+            <aside style="grid-area: leftSide;">Side menu bar</aside>
+            <main style="grid-area: mai;">Main content</main>
+            <section style="grid-area: advt;">ADVT</section>
+            <footer style="grid-area: foo;">Footer</footer>
+        </div>
+
+
+    <div class="fruitContainer">
+        <div class="grapes">
+            <!-- <img /> -->
+        </div>
+        <div class="strawberry"></div>
+        <div class="watermelon"></div>
+        <div class="orange"></div>
+        <div class="papaya"></div>
+        <div class="pineapple"></div>
+    </div>
+
+    <div class="conatinerGridOne">
+    <div class="Item"></div>
+    <div class="Item"></div>
+    <div class="Item"></div>
+    <div class="Item"></div>
+     <div class="Item"></div>
+    <div class="Item"></div>
+    <div class="Item"></div>
+    </div>
+</body>
+</html>
