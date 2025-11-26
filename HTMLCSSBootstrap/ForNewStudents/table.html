@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Table</title>
+        <link rel="icon" href="./fOne.jpg"  />
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            h1{
+            background-color:black;
+            padding: 20px;
+            }
+            p{
+                color:blue
+            }
+            .classDemo{
+                color: red;
+            }
+            .classDemoOne{
+                color: green;
+
+            }
+            .p30{
+                padding: 30px;
+            }
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                /* border-spacing: 10px; */
+            }
+            th{
+                /* border: 1px solid black; */
+                padding: 5px;
+            }
+            td{
+                /* border: 1px solid black; */
+                padding: 10px;
+            }
+            tr{
+                background-color: green;
+            }
+            tr:nth-child(even){
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: red;text-align: center;">Table</h1>
+        <p class="classDemoOne p30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laudantium corrupti culpa illum eveniet perferendis sunt praesentium non expedita ut ipsa, ea atque? Impedit exercitationem libero quae blanditiis, animi ducimus!</p>
+        <p class="classDemo p30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt temporibus distinctio adipisci eaque molestiae facere quaerat id, corporis tenetur laudantium, dolore tempora earum! Quae repellat reprehenderit in molestiae architecto voluptatem? Aspernatur distinctio aut officiis doloremque asperiores, repudiandae mollitia ipsam!</p>
+
+        <table>
+            <thead>
+                <tr>
+                <th >Roll Number</th>
+                <th colspan="2">Student Name</th>
+                <th >Contact Number</th>
+                <th>Sports</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td rowspan="2">001</td>
+                <td rowspan="2"><a href="#">Rohit </a></td>
+                <td rowspan="2">Sharma</td>
+                <td>12345612345</td>
+                <td rowspan="2">Cricket</td>
+                </tr>
+                <tr>
+                <td>12345612345</td>
+
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Sunil </td>
+                    <td>chertri</td>
+                    <td>0987987</td>
+                    <td>Football</td>
+                </tr>
+                                <tr>
+                    <td>003</td>
+                    <td>Harmanpreet </td>
+                    <td>Singh</td>
+                    <td>0111987987</td>
+                    <td>Hokey</td>
+                </tr>
+                                <tr>
+                    <td>004</td>
+                    <td>Saniya </td>
+                    <td>Mirza</td>
+                    <td>0987987</td>
+                    <td>Tennis</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrero Rocher</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+<body>
+    <nav class="navbar">
+        <!-- Left Menu -->
+        <div class="nav-left">
+            <a href="#" class="nav-link">Our Products</a>
+            <a href="#" class="nav-link">Tips & Ideas</a>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./assets/logo.avif" alt="Ferrero Rocher Logo">
+        </div>
+
+        <!-- Right Menu -->
+        <div>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-link">About Ferrero Rocher</a>
+                <a href="#" class="nav-link">Quality & Sustainability</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section  -->
+
+    <section class="hero-section">
+<div class="hero-wrapper">
+
+
+<!-- LEFT CONTENT -->
+<div class="hero-content">
+<div class="gold-border"></div>
+
+
+<h1>
+IRRESISTIBLE<br>
+TASTE<br>
+EXPERIENCE
+</h1>
+
+
+<p>
+The beauty of gold, care and infinite
+attention for quality ingredients.
+</p>
+
+
+<a href="#" class="btn-discover">DISCOVER</a>
+</div>
+
+
+<!-- RIGHT MEDIA -->
+<div class="hero-media">
+<video id="heroVideo" autoplay muted playsinline>
+<source src="video.mp4" type="video/mp4">
+</video>
+
+
+<img src="./assets/hero1.jpg" id="heroImage" alt="Ferrero Rocher" />
+</div>
+
+
+</div>
+</section>
+
+
+
+
+<div class="container">
+    <button class="scale-btn">Hover Me</button>
+
+    <div class="image-box">
+        <img src="./assets/topView.jpg" alt="Sample Image">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const video = document.getElementById('heroVideo');
+const image = document.getElementById('heroImage');
+
+
+video.onended = () => {
+video.style.display = 'none';
+image.style.display = 'block';
+};
+</script>
+</body>
+
+</html>
