@@ -7,3 +7,9 @@
 } */
 
 
+.socialIcons{
+    font-size: 2rem;
+}
+.socialIcons i:hover {
+    color: blue;
+}
