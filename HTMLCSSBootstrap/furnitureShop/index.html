@@ -15,9 +15,80 @@
 </head>
 
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EdgeCut</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactUs">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#furniture">Furniture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutUs">About Us</a>
+                    </li>
 
-    <section id="furniture" class="furnitureClass">
+                </ul>
+                <div class="d-flex">
+
+                    <button class="btn btn-outline-success" type="submit">Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="heroSection" >
+        <div class="container mt-5" style="height: 500px;">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/coroOne.jpg" class="d-block customCoroImg" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/coroTwo.jpg" class="d-block customCoroImg" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/coroThree.jpg" class="d-block customCoroImg" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="furniture" class="furnitureClass mt-5">
         <div class="container">
             <div class="customContent ">
                 <h2 class="m-4">FURNITURES</h2>
@@ -27,75 +98,81 @@
                     reprehenderit omnis error perspiciatis consectetur eius dolor!</p>
             </div>
             <div class="m-4">
-            <div class="row ">
-                <div class="col-12 col-md-4 mb-2">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./assets/chair.jpg" class="card-img-top h-50" alt="chair">
-                        <div class="card-body">
-                            <h5 class="card-title">HOME CHAIR</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="customBTN">READ MORE</a>
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/chair.jpg" class="card-img-top h-50" alt="chair">
+                            <div class="card-body">
+                                <h5 class="card-title">HOME CHAIR</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="customBTN">READ MORE</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4 mb-2">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./assets/officeChair.jpg" class="card-img-top h-50" alt="office chair">
-                        <div class="card-body">
-                            <h5 class="card-title">OFFICE CHAIR</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="customBTN">READ MORE</a>
+                    <div class="col-12 col-md-4 mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/officeChair.jpg" class="card-img-top h-50" alt="office chair">
+                            <div class="card-body">
+                                <h5 class="card-title">OFFICE CHAIR</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="customBTN">READ MORE</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4 mb-2">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./assets/officeTable.jpg" class="card-img-top h-50" alt="dinning table">
-                        <div class="card-body">
-                            <h5 class="card-title">OFFICE TABLE</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="customBTN">READ MORE</a>
+                    <div class="col-12 col-md-4 mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/officeTable.jpg" class="card-img-top h-50" alt="dinning table">
+                            <div class="card-body">
+                                <h5 class="card-title">OFFICE TABLE</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="customBTN">READ MORE</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4 mb-2">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./assets/SofaCumBed.jpg" class="card-img-top h-50" alt="chair">
-                        <div class="card-body">
-                            <h5 class="card-title">SOFA </h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="customBTN">READ MORE</a>
+                    <div class="col-12 col-md-4 mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/SofaCumBed.jpg" class="card-img-top h-50" alt="chair">
+                            <div class="card-body">
+                                <h5 class="card-title">SOFA </h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="customBTN">READ MORE</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4 mb-2">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./assets/SofaOne.jpg" class="card-img-top h-50" alt="office chair">
-                        <div class="card-body">
-                            <h5 class="card-title">Newly arrived SOFA</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="customBTN">READ MORE</a>
+                    <div class="col-12 col-md-4 mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/SofaOne.jpg" class="card-img-top h-50" alt="office chair">
+                            <div class="card-body">
+                                <h5 class="card-title">Newly arrived SOFA</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="customBTN">READ MORE</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4 mb-2">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./assets/dinningTable.jpg" class="card-img-top h-50" alt="dinning table">
-                        <div class="card-body">
-                            <h5 class="card-title">DINNING TABLE</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="customBTN">READ MORE</a>
+                    <div class="col-12 col-md-4 mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/dinningTable.jpg" class="card-img-top h-50" alt="dinning table">
+                            <div class="card-body">
+                                <h5 class="card-title">DINNING TABLE</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="customBTN">READ MORE</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
             </div>
         </div>
     </section>
@@ -119,6 +196,160 @@
             </div>
         </div>
     </section>
+
+
+    <section id="blogs">
+        <div class="container">
+            <div class="customContent ">
+                <h2 class="m-4">LATEST BLOGS</h2>
+                <p class="lead m-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, consequatur
+                    dicta. Reprehenderit, minus. Possimus quasi asperiores mollitia sunt accusantium inventore
+                    id quam ea! Reiciendis quidem molestias debitis, vitae, alias ipsa repellat saepe, tenetur
+                    reprehenderit omnis error perspiciatis consectetur eius dolor!</p>
+            </div>
+            <div class="row mx-auto">
+                <div class="col-12 col-md-4 ">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/aboutusImg.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/aboutusImg.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/aboutusImg.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="contactUs" class="aboutUSClass py-5">
+        <div class="container my-5 ">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="container w-75">
+                        <h3>CONTACT US</h3>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Full name">
+                            <label for="floatingInput">Full name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Phone Number">
+                            <label for="floatingInput">Phone Number</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="floatingPassword" placeholder="Message">
+                            <label for="floatingPassword">Message</label>
+                        </div>
+                        <div class="text-center">
+                        <button type="button" class="customBTN">SEND</button>
+                        </div>
+                    </form>
+                    </div> 
+                </div>
+                <div class="col-12 col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.7200857949524!2d73.49468417496576!3d18.63165578248351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2a74eacd7bf6f%3A0x1abd266ff59f3bea!2sDiamond%20pawna%20camping!5e0!3m2!1sen!2sin!4v1765262763332!5m2!1sen!2sin"
+                        style="border:0;width: 80%;margin: 10px auto; display: inline-block;height: 100%;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container-fluid bg-dark text-white">
+            <div class="row">
+                <div class="col">
+                    <i>ICON</i>
+                    <p>PHONE: 2345678908</p>
+                </div>
+                <div class="col">
+                    <i>icon</i>
+                    <p>Email: rtyui@rt.hj</p>
+                </div>
+                <div class="col">
+                    <i>
+                        Icon
+                    </i>
+                    <p>Location</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white">
+             <div class="row">
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <p>PHONE: 2345678908</p>
+                </div>
+                <div class="col">
+                    <i>Instagram Feed</i>
+                    <div class="container w-50">
+                        <div class="row">
+                            <div class="col-4 mb-2">
+                                <img src="./assets/chair.jpg" class="img-fluid customIMGFoo" />
+                            </div>
+                            <div class="col-4">
+                                <img src="./assets/chair.jpg" class="img-fluid customIMGFoo" />
+
+                            </div>
+                            <div class="col-4">
+                                <img src="./assets/chair.jpg" class="img-fluid customIMGFoo" />
+
+                            </div>
+                            <div class="col-4">
+                                <img src="./assets/chair.jpg" class="img-fluid customIMGFoo" />
+
+                            </div>
+                             <div class="col-4 mb-2">
+                                <img src="./assets/chair.jpg" class="img-fluid customIMGFoo" />
+
+                             </div>
+                            <div class="col-4">
+                                <img src="./assets/chair.jpg" class="img-fluid customIMGFoo" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <i>
+                        SignUp to Our News Letter
+                    </i>
+                    <p>Location</p>
+                </div>
+            </div>
+</div>
+    </footer>
+
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
