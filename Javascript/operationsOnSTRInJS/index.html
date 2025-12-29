@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>string in js</title>
+</head>
+
+<body>
+    <h1 class="text-center">Operations on String in Javascript</h1>
+
+    <div class="container my-4">
+        <div class="form-floating  w-75 mx-auto ">
+            <textarea class="form-control" placeholder="Add a paragraph" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Add paragraph</label>
+        </div>
+    </div>
+
+    <div class="container bg-secondary w-50 mx-auto text-white p-2" style="height: 100px; " id="result">
+        Result
+    </div>
+
+    <div class="container my-4 w-50 mx-auto">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-outline-dark mb-3" onclick="toCapitalise()">Capitalise</button> <br />
+                <button class="btn btn-outline-dark mb-3" onclick="countVowels()">Count Vowels</button><br />
+                <button class="btn btn-outline-dark mb-3">Count Consonents</button><br />
+                <button class="btn btn-outline-dark mb-3">Extract First Word</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-dark mb-3">Convert to small case</button><br />
+                <button class="btn btn-outline-dark mb-3">Convert to titleCase</button><br />
+                <button class="btn btn-outline-dark mb-3">Count spaces</button><br />
+                <button class="btn btn-outline-dark mb-3">Count new lines</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-dark mb-3">Replace all spaces with hypens</button>
+                <button class="btn btn-outline-dark mb-3">Sort the words</button>
+                <button class="btn btn-outline-dark mb-3">Reverse the characters</button>
+                <button class="btn btn-outline-dark mb-3">Check the palindrome</button>
+
+
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-dark mb-3">Count the words</button>
+
+            </div>     
+        </div>
+    </div>
+
+    <!-- custom js  -->
+    <script src="./scripts.js" ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

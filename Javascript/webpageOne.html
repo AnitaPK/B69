@@ -1,23 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
 
+    <h1>First Page</h1>
 
+    <p id="quotes"></p>
+    <script>
+        document.getElementById('quotes').innerHTML = "Opportunities don't happen, you create them."
+    </script>
+
+<script>
+    // alert("This is for success")
+    </script>
+<script>
+    document.write("This message is from document write")
+</script>
+
+<button onclick="hideALL()">Click Me</button>
+<h3 id="headingShow"></h3>
+
+<script>
+    function hideALL(){
+        // document.getElementById("headingShow").innerHTML = "Now I am visible"
+        document.write("**********I am the only one who is visible*********")
+    }
+</script>
 
 
     <script>
-
-        
-       console.log("Hello from webpage One") 
+        console.log("Hello from webpage One") 
+    </script>
+    <script>
+        console.log("We are learning Javascript")
     </script>
 
-
     <noscript></noscript>
+
+<button onclick="logiN()">LOGIN</button>
+<h5><i id="userName"></i></h5>
+
+<script>
+    function logiN(){
+        document.getElementById('userName').innerText = 'Welcome, Gaurav'
+    }
+</script>
+
+
+<p id="name" style="color: blue;" class="userNAME"></p>
+<h4 id="cNAME" class="userNAME"></h4>
+<script>
+    name111 = prompt("Enter your name")
+    console.log(name111)
+    cName = prompt("Enter company Name")
+    document.getElementById('name').innerHTML = name111
+    document.getElementById("cNAME").innerHTML = cName
+</script>
+
+
+<label>Email</label>
+<input type="email" id="email" />
+<label>Password</label>
+<input type="text" id="pass"/>
+<button onclick="loginAgain()">LOGIN Again</button>
+<div id="details"></div>
+
+
+<script>
+    function loginAgain(){
+    email = document.getElementById('email').value
+    password = document.getElementById('pass').value
+
+    console.log(email, password)
+document.getElementById('details').innerHTML = `<h1>${email}<b>${password}</b></h1>`
+
+    }
+</script>
+
+
+
+
+
 </body>
+
 </html>

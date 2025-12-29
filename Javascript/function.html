@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title>
+</head>
+<body>
+    <label>Enter Name</label>
+    <input type="text" placeholder="enter name" id="name" required/>
+    <label>Enter marks for English</label>
+    <input type="number" min="0" max="100" id="english" required/>
+    <label>Enter marks for Mathematics</label>
+    <input type="number" min="0" max="100" id="maths" required/>
+    <label>Enter marks for Science</label>
+    <input type="number" min="0" max="100" id="science" required/>
+
+    <button onclick="getResult()">Show Result</button>
+    <h1 id="result"></h1>
+<script>
+
+    function getPercentage(s1,s2,s3){
+        return (s1+s2+s3) / 300 *100
+    }
+    function getResult(){
+        const name1 = document.getElementById("name").value
+        let engMarks = Number(document.getElementById("english").value)
+        let mathMarks = Number(document.getElementById("maths").value)
+        let SciMarks = Number(document.getElementById("science").value)
+
+        percentage = getPercentage(engMarks,mathMarks,SciMarks).toFixed(2)
+
+        document.getElementById("result").innerHTML = name1  + "Your percentage :" + percentage
+    }
+
+
+</script>
+
+
+
+
+</body>
+</html>
