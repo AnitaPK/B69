@@ -87,3 +87,50 @@ str5 = "             Hello Batch69            "
 console.log(str5.length, 'length')
 console.log(str5.trimStart(), str5.trimStart().length, "trim start ")
 console.log(str5.trim().length)
+
+
+// .slice(), .substring(), .substr()  
+
+
+
+str11 = "wisdom sprouts"  //0123456789 10
+
+newStr = str11.slice(0,5)   
+console.log(newStr)
+console.log(str11.slice(7))
+console.log("--------------------------")
+
+newstr1 = str11.substring(10, 16)
+
+console.log(newstr1)
+
+accNo = "98765345679"
+        //  012345678910
+
+console.log(accNo.slice(0,4))
+console.log(accNo.slice(-4))
+
+paragraph = "fgh rtyui fghj ktyu ighj rty asd sdf gsdfghj sdfghj sdfghj dfghj dfgh"
+
+console.log(paragraph.slice(0,18)+'...')
+
+console.log(accNo.substr(5,10))
+console.log("--------------------------")
+
+str = "malayalam" 
+revStr = ''
+for(i=str.length -1; i>=0;i--){
+    console.log(i)
+    console.log(str[i])
+    revStr = revStr+str[i]
+    console.log(revStr)
+}
+
+// "saas"  "madam" "eye" "wow" "nitin" "nayan" "malayalam" "level" "steponthepets" 'refer'
+
+
+if(str == revStr){
+    console.log("palindrom")
+}else{
+    console.log("Not Palindrom")
+}
