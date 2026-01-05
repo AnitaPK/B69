@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fruit list</title>
+    <style>
+        .textColor{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="userName"></div>
+    <ul id="fShow">
+
+    </ul>
+    <script>
+        strArray = ["prasad", 'ramesh','kiran']
+        document.getElementById("userName").innerHTML =strArray.map((user)=>`
+                                <div>
+        <h3>To <span class='textColor'>${user.toUpperCase()}</span></h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, minima fugit. Voluptas numquam asperiores obcaecati, tempora ipsam corporis odio necessitatibus.</p>
+    </div>
+        `).join('')
+
+
+        const fruits = ["Apple","Banana","Mango"]
+
+        document.getElementById("fShow").innerHTML = fruits.map((fruit)=>`
+                                                <li>${fruit}</li>
+        `).join('')
+
+    </script>
+</body>
+</html>
