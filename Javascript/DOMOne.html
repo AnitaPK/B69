@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p id="paraDemo"></p>
+    <div class="divClass"></div>
+    <ul class="divClass"></ul>
+    <a href="./assignmentOne.html">Hello</a>
+    <div id="demoOne" style="font-size: 22px;"></div>
+
+    <img src="./checkLoggedIn.png" id="imgChange" width="200" height="200"/>
+    <button id="btnChangeIMG">Change Image</button>
+
+
+    <script>
+        document.querySelector("#btnChangeIMG").addEventListener('click', ()=>{
+            // console.log("clickedHHHHHHHHHHHHH")
+            imgElmt = document.querySelector("#imgChange")
+
+           if(imgElmt.getAttribute('src') == './checkLoggedIn.png'){
+                        imgElmt.setAttribute('src', './DOM.png') 
+                        imgElmt.style.border = '3px solid red'
+           }else{
+            imgElmt.setAttribute('src', './checkLoggedIn.png')
+           }
+
+
+
+        })
+    </script>
+
+</body>
+</html>
