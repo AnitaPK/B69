@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        let getDataPromise = new Promise((resolve,reject)=>{
+
+            success = false;
+
+            if(success){
+            resolve("Data fetch successfully")
+            }else{
+            reject("Error while fetchind")
+            }
+        })
+
+
+        getDataPromise
+        .then((res)=>console.log("success", res))
+        .catch(err=> console.log("failure", err))
+
+
+        let chahaPromise = new Promise((resolve,reject)=>{
+            rameshAvailable = false
+
+            setTimeout(()=>{
+                 if(rameshAvailable){
+                resolve("Kiran la chaha bhetala")
+            }else{
+                reject("Kiran chidala")
+            }
+            },5000)
+        })
+
+        chahaPromise
+        .then((res)=>console.log(res))
+        .catch((err)=>console.log(err))
+
+        // "https://randomuser.me/api/?results=10"
+
+        async function fetchData(){
+
+        const res = await fetch("https://randomuser.me/api/?results=10")
+
+        console.log(res)
+        
+    }
+fetchData()
+
+
+
+    </script>
+</body>
+</html>
