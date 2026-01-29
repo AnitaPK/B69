@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
     const [userName, setUserName] = useState()
@@ -40,7 +41,8 @@ const Register = () => {
                             onChange={(e)=>setPassword(e.target.value)}
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Register</button>
+                    <Link to='/' >If already registered</Link>
                 </form>
             </div>
         </>
