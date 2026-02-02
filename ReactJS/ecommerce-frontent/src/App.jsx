@@ -7,20 +7,23 @@ import Register from './pages/Register'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-              <Route path='/' element={<LoginPage />}></Route>
-              <Route path='/register' element={<Register />}></Route>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <Header />
+    //   <Routes>
+    //           <Route path='/' element={<LoginPage />}></Route>
+    //           <Route path='/register' element={<Register />}></Route>
+    //   </Routes>
+    //   <Footer />
+    // </BrowserRouter>
 
+
+    <Dashboard />
     // <Register />
     //   <LoginPage />
   )
