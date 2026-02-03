@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Dashboard from './pages/Dashboard'
+import ProductInfo from './components/ProductInfo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,8 +23,13 @@ function App() {
     //   <Footer />
     // </BrowserRouter>
 
+<BrowserRouter >
+<Routes>
+<Route path='/' element={<Dashboard />} ></Route>
+<Route path='/:ID' element={<ProductInfo />}></Route>
+</Routes>
+    </BrowserRouter>
 
-    <Dashboard />
     // <Register />
     //   <LoginPage />
   )
