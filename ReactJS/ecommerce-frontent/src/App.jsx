@@ -11,24 +11,28 @@ import Dashboard from './pages/Dashboard'
 import ProductInfo from './components/ProductInfo'
 
 function App() {
-  const [count, setCount] = useState(0)
+const [user,setUser] = useState()  
 
   return (
-    // <BrowserRouter>
-    //   <Header />
-    //   <Routes>
-    //           <Route path='/' element={<LoginPage />}></Route>
-    //           <Route path='/register' element={<Register />}></Route>
-    //   </Routes>
-    //   <Footer />
-    // </BrowserRouter>
-
-<BrowserRouter >
-<Routes>
-<Route path='/' element={<Dashboard />} ></Route>
-<Route path='/:ID' element={<ProductInfo />}></Route>
-</Routes>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<LoginPage setUser={setUser}/>}></Route>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='/dashboard' element={<Dashboard user={user} />} ></Route>
+        <Route path='/dashboard/:ID' element={<ProductInfo />}></Route>
+      </Routes>
+      <Footer />
     </BrowserRouter>
+
+
+// <BrowserRouter >
+// <Routes>
+// <Route path='/' element={<Dashboard />} ></Route>
+// <Route path='/:ID' element={<ProductInfo />}></Route>
+// </Routes>
+// </BrowserRouter>
+
 
     // <Register />
     //   <LoginPage />

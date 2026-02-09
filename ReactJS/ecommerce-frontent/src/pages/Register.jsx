@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Register = () => {
     const [userName, setUserName] = useState()
     const [email, setEmail] = useState()
     const [password,setPassword] = useState()
+    const navigate = useNavigate()
 
     const handleRegister = (event) =>{
         event.preventDefault()
@@ -14,6 +15,7 @@ const Register = () => {
             name:userName, email:email, password:password
         }
         localStorage.setItem('userB69',JSON.stringify(regUser))
+        navigate('/')
     }
 
     console.log(userName)

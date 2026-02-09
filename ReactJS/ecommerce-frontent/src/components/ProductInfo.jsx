@@ -5,21 +5,30 @@ import { Link, useParams } from 'react-router-dom'
 const ProductInfo = () => {
   const [product, setProduct] = useState(null)
   const { ID } = useParams()
+  const [isLoading,setIsLoading] = useState(true)
 
   async function fetchDataObject() {
     const res = await axios.get('https://dummyjson.com/products')
     const tempProducts = res.data.products
     const idProd = tempProducts.find(p => p.id == ID)
     setProduct(idProd)
+    setIsLoading(false)
   }
 
   useEffect(() => {
     fetchDataObject()
   }, [])
 
-  if (!product) {
-    return <div className="text-center mt-5">Loading...</div>
+  // if (!product) {
+  //   return <div className="text-center mt-5">Loading...</div>
+  // }
+
+  if(isLoading){
+    return <div className='spinner-border text-primary' role='status'>
+      <span className='visually hiddden'>Loading...</span>
+    </div>
   }
+
 console.log(product.images)
   return (
     <div className="container my-5">
@@ -65,7 +74,9 @@ console.log(product.images)
           <h2 className="fw-bold">{product.title}</h2>
           <p className="text-muted">{product.brand} • {product.category}</p>
 
-          <span className={`badge ${product.stock > 0 ? 'bg-success' : 'bg-danger'}`}>
+          <span className={
+            `badge ${product.stock > 0 ? 'bg-success' : 'bg-danger'}`
+            }>
             {product.availabilityStatus}
           </span>
 

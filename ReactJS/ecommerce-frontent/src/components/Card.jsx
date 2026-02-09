@@ -10,7 +10,7 @@ const Card = ({prod}) => {
                                         <h5 className="card-title">{prod.title}</h5>
                                         <p className="card-text text-truncate">{prod.description}</p>
                                         <p>Price: {prod.price}</p>
-                                        <Link to={`/${prod.id}`} className="btn btn-primary">Get More Info</Link>
+                                        <Link to={`/dashboard/${prod.id}`} className="btn btn-primary">Get More Info</Link>
                                     </div>
                             </div>
                         </div>

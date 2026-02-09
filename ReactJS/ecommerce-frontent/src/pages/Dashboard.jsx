@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Card from '../components/Card'
 import { FaFilter } from "react-icons/fa";
 
-const Dashboard = () => {
+const Dashboard = ({user}) => {
     const [products, setProducts] = useState([])
     const [searchKey, setSearchKey] = useState("")
     const [filterProducts, setFilterProducts] = useState([])
@@ -11,6 +11,7 @@ const Dashboard = () => {
     const [maxPrice, setMaxPrice] = useState()
     const [brands, setBrands] = useState([])
     const [brandInput, setBrandInput] = useState()
+    const [loggeddUser, setLoggedUser] = useState()
 
     // fetchData from api 
     async function fetchData() {
@@ -22,6 +23,7 @@ const Dashboard = () => {
 
     // one time fetchData on component mount 
     useEffect(() => {
+        setLoggedUser(user)
         fetchData()
     }, [])
     // search products 
@@ -79,7 +81,8 @@ function handleFilterByBrand(){
     return (
         <>
             <nav>
-                <div className='ms-5'>
+                <div className='ms-5 d-flex justify-content-between'>
+                    <div>
                     <input
                         type="search"
                         // onChange={handleSearchKey}
@@ -88,6 +91,10 @@ function handleFilterByBrand(){
                     // value={searchKey}
                     />
                     <span className='badge rounded-pill text-bg-primary'>{filterProducts.length}</span>
+                </div>
+                <div>
+                    <h3>{loggeddUser && (<span>{loggeddUser.name}</span>) }</h3>
+                </div>
                 </div>
 
             </nav>
