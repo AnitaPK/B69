@@ -1,11 +1,16 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { cartReducer, initialCartState } from '../cartReducer/cartReducer'
+
 
 const ProductInfo = () => {
   const [product, setProduct] = useState(null)
   const { ID } = useParams()
   const [isLoading,setIsLoading] = useState(true)
+
+  const [cart, dispatch] = useReducer(cartReducer, initialCartState)
+
 
   async function fetchDataObject() {
     const res = await axios.get('https://dummyjson.com/products')
@@ -22,6 +27,22 @@ const ProductInfo = () => {
   // if (!product) {
   //   return <div className="text-center mt-5">Loading...</div>
   // }
+   function handleAddToCart(){
+    console.log("************")
+    const cartProduct = {
+      id:product.id,
+      title:product.title,
+      price:product.price,
+      discountPercentage:product.discountPercentage
+    }
+    console.log(cartProduct)
+    dispatch({type:'ADD_TO_CART', payload:cartProduct})
+  }
+
+useEffect(() => {
+  localStorage.setItem('cartB69', JSON.stringify(cart));
+}, [cart]);
+
 
   if(isLoading){
     return <div className='spinner-border text-primary' role='status'>
@@ -29,11 +50,11 @@ const ProductInfo = () => {
     </div>
   }
 
-console.log(product.images)
+
   return (
     <div className="container my-5">
       <div className="container">
-        <Link to='/' >Back</Link>
+        <Link to='/dashboard' >Back</Link>
       </div>
       <div className="row g-4">
         
@@ -118,7 +139,7 @@ console.log(product.images)
             ))}
           </div>
 
-          <button className="btn btn-dark btn-lg me-3">
+          <button className="btn btn-dark btn-lg me-3" onClick={()=>handleAddToCart()}>
             Add to Cart
           </button>
           <button className="btn btn-outline-primary btn-lg">

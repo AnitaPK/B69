@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useReducer, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,6 +9,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Dashboard from './pages/Dashboard'
 import ProductInfo from './components/ProductInfo'
+import { cartReducer, initialCartState } from './cartReducer/cartReducer'
+import CartPage from './pages/CartPage'
 
 function App() {
 const [user,setUser] = useState()  
@@ -21,6 +23,7 @@ const [user,setUser] = useState()
         <Route path='/register' element={<Register />}></Route>
         <Route path='/dashboard' element={<Dashboard user={user} />} ></Route>
         <Route path='/dashboard/:ID' element={<ProductInfo />}></Route>
+        <Route path='/cart' element={<CartPage  />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
