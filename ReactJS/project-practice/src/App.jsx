@@ -7,15 +7,18 @@ import Greetings from './components/Greetings'
 import Collections from './components/Collections'
 import CounterReducer from './components/CounterReducer'
 import CoinCollector from './components/CoinCollector'
+import ConditionalRendering from './components/ConditionalRendering'
+import PracticeInterview from './components/PracticeInterview'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <PracticeInterview />
+    <ConditionalRendering />
     <CoinCollector />
     <CounterReducer />
-
 
 <div style={{height:"50px"}}></div>
     <hr />
