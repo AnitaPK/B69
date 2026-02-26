@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { ThemeContext } from '../theme/ThemeProvider'
 
 const LoginPage = ({setUser}) => {
     const [email,setEmail] = useState()
     const [password,setPassword] =useState()
     const [regUser,setRegUser] = useState()
     const navigate = useNavigate()
+
+    const {theme} = useContext(ThemeContext)
 
     function handleSubmit(event){
         event.preventDefault()
@@ -29,7 +32,7 @@ const LoginPage = ({setUser}) => {
 
     return (
         <>
-            <div className="container w-50 mx-auto mt-5">
+            <div className={`container w-50 mx-auto mt-5 ${theme == 'dark' && 'bg-dark text-white'}`}>
                 <h3>Login here</h3>
 
                 <form onSubmit={handleSubmit}>

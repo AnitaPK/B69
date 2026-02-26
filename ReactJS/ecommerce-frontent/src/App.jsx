@@ -11,13 +11,16 @@ import Dashboard from './pages/Dashboard'
 import ProductInfo from './components/ProductInfo'
 import { cartReducer, initialCartState } from './cartReducer/cartReducer'
 import CartPage from './pages/CartPage'
+import Navbar from './components/Navbar'
 
 function App() {
 const [user,setUser] = useState()  
 
   return (
+    
     <BrowserRouter>
-      <Header />
+    <Navbar />
+      {/* <Header /> */}
       <Routes>
         <Route path='/' element={<LoginPage setUser={setUser}/>}></Route>
         <Route path='/register' element={<Register />}></Route>

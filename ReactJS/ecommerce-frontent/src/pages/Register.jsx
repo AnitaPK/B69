@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { ThemeContext } from '../theme/ThemeProvider'
 
 const Register = () => {
     const [userName, setUserName] = useState()
     const [email, setEmail] = useState()
     const [password,setPassword] = useState()
     const navigate = useNavigate()
+        const {theme} = useContext(ThemeContext)
+    
 
     const handleRegister = (event) =>{
         event.preventDefault()
@@ -22,7 +25,7 @@ const Register = () => {
 
     return (
         <>
-            <div className="container w-50 mx-auto mt-5">
+            <div className={`container w-50 mx-auto mt-5 ${theme == 'dark' && 'bg-dark text-white'}`}>
                 <h3>Register here</h3>
 
                 <form onSubmit={handleRegister}>
