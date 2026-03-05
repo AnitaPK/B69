@@ -1,7 +1,8 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Card from '../components/Card'
 import { FaFilter } from "react-icons/fa";
+import GototTOp from '../components/GototTOp';
 
 const Dashboard = ({user}) => {
     const [products, setProducts] = useState([])
@@ -12,6 +13,8 @@ const Dashboard = ({user}) => {
     const [brands, setBrands] = useState([])
     const [brandInput, setBrandInput] = useState()
     const [loggeddUser, setLoggedUser] = useState()
+
+    const gotToTopRef = useRef(null)
 
     // fetchData from api 
     async function fetchData() {
@@ -80,6 +83,7 @@ function handleFilterByBrand(){
 
     return (
         <>
+        <div ref={gotToTopRef} ></div>
             <nav>
                 <div className='ms-5 d-flex justify-content-between'>
                     <div>
@@ -134,6 +138,8 @@ function handleFilterByBrand(){
                 </div>
             </div>
 
+
+<GototTOp gotToTopRef={gotToTopRef}/>
         </>
     )
 }

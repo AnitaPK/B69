@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ThemeContext } from '../theme/ThemeProvider'
 
@@ -9,6 +9,12 @@ const LoginPage = ({setUser}) => {
     const navigate = useNavigate()
 
     const {theme} = useContext(ThemeContext)
+
+    const emailInputRef = useRef(null)
+
+    useEffect(()=>{
+        emailInputRef.current.focus()
+    },[])
 
     function handleSubmit(event){
         event.preventDefault()
@@ -43,6 +49,7 @@ const LoginPage = ({setUser}) => {
                         className="form-control" 
                         id="exampleInputEmail1" 
                         onChange={(e)=>setEmail(e.target.value)}
+                        ref={emailInputRef}
                         />
                     </div>
                     <div className="mb-3">

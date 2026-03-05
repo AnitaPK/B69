@@ -9,12 +9,15 @@ import CounterReducer from './components/CounterReducer'
 import CoinCollector from './components/CoinCollector'
 import ConditionalRendering from './components/ConditionalRendering'
 import PracticeInterview from './components/PracticeInterview'
+import PaginationOnFruit from './components/PaginationOnFruit'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <PaginationOnFruit />
+    <hr />
     <PracticeInterview />
     <ConditionalRendering />
     <CoinCollector />
