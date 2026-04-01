@@ -10,10 +10,12 @@ const Task = sequelize.define("Task",{
         type:DataTypes.STRING
     },
     status:{
-        type:DataTypes.STRING
+        type:DataTypes.ENUM('pending','inprogress','completed'),
+        defaultValue:'pending'
     },
     priority:{
-        type:DataTypes.STRING
+        type:DataTypes.ENUM('high','medium','low'),
+        defaultValue:'low'
     },
     startDate:{
         type:DataTypes.DATE
