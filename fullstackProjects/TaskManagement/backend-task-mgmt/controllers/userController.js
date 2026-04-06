@@ -71,10 +71,20 @@ async function getUserInfo(req, res) {
     }
 }
 
+function updateUser(req,res){
+    try{
+        res.status(200).send({success:true})
+    }catch (error) {
+        res.status(500).send({ success: false, msg: "Server Error" })
+
+    }
+}
+
 module.exports = {
     register,
     login,
-    getUserInfo
+    getUserInfo,
+    updateUser
 }
 
 
