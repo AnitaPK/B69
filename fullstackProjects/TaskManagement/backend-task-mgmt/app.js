@@ -6,6 +6,7 @@ const dbConn = require('./config/db')
 const association = require('./models/associations')
 const taskRouter = require('./routes/taskRoute')
 const userRouter = require('./routes/userRoute')
+const assignTaskRouter = require('./routes/assignTaskRoute')
 
 
 
@@ -22,6 +23,7 @@ app.get('/',(req,res)=>{
 app.use('/tasks', taskRouter)
 // create route user 
 app.use('/user',userRouter)
+app.use('/assignTask', assignTaskRouter)
 
 app.listen(port,()=>{
     console.log(`server running on http://localhost:${port}`)
