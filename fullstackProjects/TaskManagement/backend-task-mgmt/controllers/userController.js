@@ -3,8 +3,17 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const User = require('../models/userModel')
 
+
+const BASE_URL = 'http://localhost:5010/upload/'
+
+// http://localhost:5010/download/upload/1775624394280.jpeg
+
+
 async function register(req, res) {
+    console.log(req.body, req.file)
     const { name, email, password, contactNumber } = req.body
+    const imgPATH =req.file ?  req.file.filename : null
+    console.log(imgPATH, "%%%%%%%%%%%%%%%%%%%%%%%%%%%")
     try {
 
         regUser = await User.findOne({ where: { email: email } })
@@ -19,7 +28,8 @@ async function register(req, res) {
                 name: name,
                 email: email,
                 password: hashPassword,
-                contactNumber: contactNumber
+                contactNumber: contactNumber,
+                img_path: imgPATH
             })
             res.status(200).send({ success: true, msg: "registered successfully" })
         }
@@ -57,6 +67,7 @@ async function login(req, res) {
 }
 
 async function getUserInfo(req, res) {
+
     try {
         const ID = req.user.ID
         const loggedUserInfo = await User.findByPk(ID, {
@@ -64,7 +75,12 @@ async function getUserInfo(req, res) {
                 exclude: ["password"]
             }
         })
-        res.status(200).send({ user: loggedUserInfo, success: true })
+        console.log("$$$$$$$$$$$$",loggedUserInfo)
+
+        const loggedUserInfoSTR=loggedUserInfo.toJSON()
+        loggedUserInfoSTR.img_path =loggedUserInfo.img_path ? BASE_URL+loggedUserInfo.img_path : null
+        console.log("***********",loggedUserInfoSTR)
+        res.status(200).send({ user: loggedUserInfoSTR, success: true })
     } catch (error) {
         res.status(500).send({ success: false, msg: "Server Error" })
 
@@ -80,11 +96,25 @@ function updateUser(req,res){
     }
 }
 
+
+async function getAllUsers(req,res){
+        try{
+        const allUsers = await User.findAll({
+            attributes: ['id', 'name']
+        })
+        res.status(200).send({success:true,allUsers:allUsers})
+    }catch (error) {
+        res.status(500).send({ success: false, msg: "Server Error" })
+
+    }
+}
+
 module.exports = {
     register,
     login,
     getUserInfo,
-    updateUser
+    updateUser,
+    getAllUsers
 }
 
 
