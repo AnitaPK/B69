@@ -40,11 +40,12 @@ async function register(req, res) {
 }
 
 async function login(req, res) {
+    console.log(req.body)
     const { email, password } = req.body
     try {
         const alreadyUser = await User.findOne({ where: { email: email } })
         console.log(alreadyUser)
-        if (!alreadyUser) {
+        if(!alreadyUser) {
             res.status(400).send({ msg: "User not found" })
         } else {
             checkPassword = await bcryptjs.compare(password, alreadyUser.password)
@@ -57,7 +58,7 @@ async function login(req, res) {
                 console.log(ID,"******ID")
                 const genToken = jwt.sign({ ID: ID,role:role }, process.env.SECREAT_KEY, { expiresIn: "1hr" })
                 console.log(genToken,"******")
-                res.status(202).send({ msg: "Login successful", token: genToken })
+                res.status(202).send({success:true, msg: "Login successful", token: genToken })
             }
         }
     } catch (error) {

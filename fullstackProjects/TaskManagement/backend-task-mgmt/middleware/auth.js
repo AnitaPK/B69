@@ -12,18 +12,23 @@ let token = req.headers.authorization
 if(!token){
     res.status(400).send({"msg":"Please Login"})
 }
-if(token.startsWith("Bearer")){
+try{
+if(token.startsWith("Bearer ")){
     token = token.split(" ")[1]
-    // console.log(token,"********")
+    console.log(token,"in auth file********")
     const decoded = jwt.verify(token, process.env.SECREAT_KEY)
-console.log(decoded)
+console.log(decoded, "In auth file")
 req.user = decoded 
-console.log(req.user.ID)
+console.log(req.user.ID,"In auth file")
     next()
-
-}else{
+    }else{
     res.status(400).send({"msg": "Not authorized"})
 }
+
+        } catch (err) {
+            return res.status(401).send({ msg: "Invalid Token" })
+        }
+
 
 }
 

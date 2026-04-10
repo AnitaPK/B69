@@ -8,7 +8,7 @@ router.post('/register',upload.single('myFile'),userController.register)
 router.post('/login',userController.login) 
 router.get('/getUserInfo',auth, userController.getUserInfo)
 
-// router.patch('/updateUser/:user_Id', auth, userController.updateUser)
+// router.patch('/updateUser/:user_Id', auth, userController.updateUser) for update password
 
 router.get('/getAllUsers', userController.getAllUsers)
 
